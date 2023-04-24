@@ -28,6 +28,16 @@ device_info_map = {
 }
 
 smart_attributes_whitelist = {
+    'power_fail_health',
+    'reallocated_event_count',
+    'sata_crc_error_count',
+    'thermal_throttling_cnt',
+    'crc_error_count',
+    'ssd_life_left',
+    'read_fail_count',
+    'flash_writes_gib',
+    'lifetime_writes_gib',
+    'lifetime_reads_gib',
     'airflow_temperature_cel',
     'command_timeout',
     'current_pending_sector',
