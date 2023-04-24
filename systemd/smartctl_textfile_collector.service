@@ -1,0 +1,16 @@
+[Unit]
+Description=smartctl textfile collector service
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sh -c "/opt/node_exporter/text_file/smartmon.py | /usr/bin/sponge /var/lib/node_exporter/textfile_collector/smartmon.prom"
+User=root
+Group=root
+SyslogIdentifier=smartctl_textfile_collector
+RemainAfterExit=no
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
